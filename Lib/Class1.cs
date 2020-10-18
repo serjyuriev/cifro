@@ -8,9 +8,6 @@ namespace Lib
 {
     public class Class1
     {
-        void printf()
-        {
-            Console.WriteLine("AUE");
-        }
+
     }
 }
