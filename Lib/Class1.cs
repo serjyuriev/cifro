@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lib
 {
+    /// <summary>
+    /// Тестовый комментарий
+    /// </summary>
     public class Class1
     {
     }
