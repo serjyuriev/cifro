@@ -41,14 +41,19 @@ namespace Lib
             }
         }
 
+        public void SaveRegime()
+        {
+            _rastr.Save(@"D:\test.rg2", _pathToSHABLON);
+        }
+
         /// <summary>
         /// Изменить состояние узлов и ветвей
         /// </summary>
         /// <param name="nodes">Список с номерами узлов</param>
         /// <param name="branches">Список с номерами ветвей
         /// в формате n-n</param>
-        public void ChangeState(IDictionary<string, int> nodes, 
-            IDictionary<string, int> branches)
+        public void ChangeState(IDictionary<string, bool> nodes, 
+            IDictionary<string, bool> branches)
         {
             // Меняем состояние всех указанных узлов
             var nodeTable = (table)_rastr.Tables.Item("node");
@@ -57,11 +62,12 @@ namespace Lib
             foreach (string node in nodes.Keys)
             {
                 nodeTable.SetSel($"ny={ node }");
-                nodeState.Z[nodeTable.FindNextSel[-1]] = nodes[node];
+                nodeState.Z[nodeTable.FindNextSel[-1]] = 
+                    nodes[node];
             }
 
             // Меняем состояние всех указанных ветвей
-            var branchTable = (table)_rastr.Tables.Item("node");
+            var branchTable = (table)_rastr.Tables.Item("vetv");
             var branchState = (col)branchTable.Cols.Item("sta");
 
             foreach (string branch in branches.Keys)
