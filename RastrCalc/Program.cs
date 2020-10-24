@@ -13,25 +13,32 @@ namespace RastrCalcTest
         public static void Main(string[] args)
         {
             var rastr = new RastrCalc();
+            var pathToNormal = @"D:\testNorm.rg2";
+            var pathToKZ = @"D:\testKZ.rg2";
 
-            rastr.LoadRegime(@"Z:\Магистратура\Семестр 1\" + 
-                @"Режимы и устойчивость электроэнергетических систем\" + 
-                @"Лабораторная работа №4\Юрьев.rg2");
+            rastr.LoadNormRegime(pathToNormal);
+            rastr.LoadKZRegime(pathToKZ);
 
-            var nodes = new Dictionary<string, bool>()
-            {
-                {"30", true },
-                {"31", true }
-            };
+            // В таком виде должна (на данный момент)
+            // быть информация об изменении состояния
+            // ветвей и узлов в схеме
+            // true - выключена, false - включена
+            //var nodes = new Dictionary<string, bool>()
+            //{
+            //    {"30", true },
+            //    {"31", true }
+            //};
 
             var branches = new Dictionary<string, bool>()
             {
-                { "29-30", true },
-                { "29-31", true }
+                { "27-7", false }
             };
 
-            rastr.ChangeState(nodes, branches);
+            rastr.CalculateSwitching(null, branches);
+
             rastr.SaveRegime();
+
+            Console.WriteLine(rastr.SwitchingFlag);
 
             Console.Read();
         }
