@@ -28,34 +28,6 @@ namespace Lib
         }
 
         /// <summary>
-        /// Словарь соответсвия названия полей класса Node и наименования столбцов в таблицы "Узлы" Растра
-        /// </summary>
-        private static Dictionary<string, string> _nodesTableDictionary = new Dictionary<string, string>
-        {
-            {"Status", "sta"},
-            {"Id", "ny"},
-            {"Type", "tip"},
-            {"Name", "name"},
-            {"Unom", "uhom"},
-            {"Ncxn", "nsx"},
-            {"Pn", "pn"},
-            {"Qn", "qn"},
-            {"Pgn", "pg"},
-            {"Qgn", "qg"},
-            {"Vzd", "vzd"},
-            {"Qmin", "qmin"},
-            {"Qmax", "qmax"},
-            {"Bshunt", "bsh"},
-            {"V", "vras"},
-            {"Delta", "delta"}
-        };
-
-        /// <summary>
-        /// Словарь соответсвия названия полей класса Line и наименования столбцов в таблицы "Ветви" Растра
-        /// </summary>
-        private static Dictionary<string, string> _linesTableDictionary = new Dictionary<string, string> { };
-
-        /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
@@ -116,6 +88,22 @@ namespace Lib
                 }
             }
             return parameters;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckRegimeStatus() 
+        {
+           ITable ParamRgm = _rastr.Tables.Item("com_regim");
+           ICol statusRgm = ParamRgm.Cols.Item("status");
+           _rastr.rgm(""); 
+           int status = statusRgm.get_ZN(0);
+           if (status == 0)
+               return true;
+            else
+               return false;
         }
     }
 }
