@@ -6,10 +6,14 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Lib\Model.csproj", "{DD495FC5-7969-4A20-BB64-D22D2C9574E1}"
 EndProject
 <<<<<<< HEAD
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", "{0E400EBD-8EAB-4D00-8B4C-E5B7A23CF452}"
 =======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RastrCalcTest", "RastrCalc\RastrCalcTest.csproj", "{E659A1F7-155F-49D4-A805-3594F64C8D5A}"
 >>>>>>> yuriev
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWGv0", "AWGv0\AWGv0.csproj", "{040955F8-A46E-4502-8F6D-B4F8ED94CD24}"
+>>>>>>> andreychenko
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +26,7 @@ Global
 		{DD495FC5-7969-4A20-BB64-D22D2C9574E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD495FC5-7969-4A20-BB64-D22D2C9574E1}.Release|Any CPU.Build.0 = Release|Any CPU
 <<<<<<< HEAD
+<<<<<<< HEAD
 		{0E400EBD-8EAB-4D00-8B4C-E5B7A23CF452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0E400EBD-8EAB-4D00-8B4C-E5B7A23CF452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E400EBD-8EAB-4D00-8B4C-E5B7A23CF452}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,6 +37,12 @@ Global
 		{E659A1F7-155F-49D4-A805-3594F64C8D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E659A1F7-155F-49D4-A805-3594F64C8D5A}.Release|Any CPU.Build.0 = Release|Any CPU
 >>>>>>> yuriev
+=======
+		{040955F8-A46E-4502-8F6D-B4F8ED94CD24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040955F8-A46E-4502-8F6D-B4F8ED94CD24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040955F8-A46E-4502-8F6D-B4F8ED94CD24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040955F8-A46E-4502-8F6D-B4F8ED94CD24}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> andreychenko
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
