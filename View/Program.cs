@@ -20,7 +20,7 @@ namespace View
             GrafAnalyzer grafAnalyzer = new GrafAnalyzer();
             var fullAdjacencyMatrix = grafAnalyzer.GetFullAdjacencyMatrix(nodes, links);
             var currentAdjacencyMatrix = grafAnalyzer.GetCurrentAdjacencyMatrix(nodes, links);
-
+            var a = _rastrAPI.CheckRegimeStatus();
 
         }
 

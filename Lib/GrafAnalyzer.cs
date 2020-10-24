@@ -23,7 +23,15 @@ namespace Lib
             }
             foreach (var item in links)
             {
-                matrix[item.StartNode, item.EndNode] = item.X;
+                double[] arrayX = new double[(matrix.GetLength(0))];
+                for (int k = 0; k < arrayX.GetLength(0); k++)
+                {
+                    arrayX[k] = matrix[0, k];
+                }
+                double[] arrayY = arrayX;
+                var i = Array.IndexOf(arrayX, item.StartNode);
+                var j = Array.IndexOf(arrayY, item.EndNode);
+                matrix[i, j] = item.X;
             }
             DisplayMatrix(matrix);
             return matrix;
@@ -45,7 +53,15 @@ namespace Lib
             {
                 if (item.Status==0)
                 {
-                    matrix[item.StartNode, item.EndNode] = item.X;
+                    double[] arrayX = new double[(matrix.GetLength(0))];
+                    for (int k = 0; k < arrayX.GetLength(0); k++)
+                    {
+                        arrayX[k] = matrix[0, k];
+                    }
+                    double[] arrayY = arrayX;
+                    var i = Array.IndexOf(arrayX, item.StartNode);
+                    var j = Array.IndexOf(arrayY, item.EndNode);
+                    matrix[i, j] = item.X;
                 }
             }
             DisplayMatrix(matrix);
@@ -66,7 +82,18 @@ namespace Lib
             }
             foreach (var item in links)
             {
-                matrix[item.StartNode, item.EndNode] = item.X;
+                if (item.R==0.01)
+                {
+                    double[] arrayX = new double[(matrix.GetLength(0))];
+                    for (int k = 0; k < arrayX.GetLength(0); k++)
+                    {
+                        arrayX[k] = matrix[0, k];
+                    }
+                    double[] arrayY = arrayX;
+                    var i = Array.IndexOf(arrayX, item.StartNode);
+                    var j = Array.IndexOf(arrayY, item.EndNode);
+                    matrix[i, j] = item.X;
+                }
             }
             DisplayMatrix(matrix);
             return matrix;
