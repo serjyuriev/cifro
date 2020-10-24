@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lib\Lib.csproj">
+    <ProjectReference Include="..\Lib\Model.csproj">
       <Project>{dd495fc5-7969-4a20-bb64-d22d2c9574e1}</Project>
-      <Name>Lib</Name>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
